@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="create_item_table" author="Krasimir Todorov" runOnChange="true">
+        <createTable tableName="items">
+            <column name="id" type="uuid" autoIncrement="${autoIncrement}">
+                <constraints
+                        primaryKey="true"
+                        unique="true"
+                        nullable="false"
+                />
+            </column>
+            <column name="item_type" type="VARCHAR(15)">
+                <constraints
+                        nullable="false"
+                />
+            </column>
+            <column name="name" type="VARCHAR(50)">
+                <constraints
+                        nullable="false"
+                />
+            </column>
+            <column name="price" type="DOUBLE">
+                <constraints
+                        nullable="false"
+                />
+            </column>
+            <column name="supermarket_id" type="uuid">
+                <constraints
+                        nullable="true"
+                />
+            </column>
+        </createTable>
+
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog">
+    <changeSet id="create-authors-table" author="KT" runOnChange="true">
+        <createTable tableName="supermarkets">
+            <column name="id" type="uuid" autoIncrement="${autoIncrement}">
+                <constraints
+                        primaryKey="true"
+                        unique="true"
+                        nullable="false"
+                />
+            </column>
+            <column name="name" type="VARCHAR(64)">
+                <constraints
+                        nullable="false"
+                />
+            </column>
+            <column name="address" type="VARCHAR(128)">
+                <constraints
+                        nullable="false"
+                />
+            </column>
+            <column name="work_hours" type="VARCHAR(50)">
+                <constraints
+                        nullable="false"
+                />
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

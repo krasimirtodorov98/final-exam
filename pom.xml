@@ -12,10 +12,18 @@
 	<artifactId>exam</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>exam</name>
-	<description>Final endava project </description>
+	<description>Endava final project </description>
 	<properties>
 		<java.version>11</java.version>
+		<liquibase.propertyFile>${project.basedir}/liquibase.properties</liquibase.propertyFile>
+		<liquibase-core.version>4.3.1</liquibase-core.version>
 		<testcontainers.version>1.15.3</testcontainers.version>
+		<modelmapper.version>2.4.0</modelmapper.version>
+		<mysql.version>8.0.22</mysql.version>
+		<super-csv.version>2.4.0</super-csv.version>
+		<jasypt-spring-boot-starter.version>3.0.3</jasypt-spring-boot-starter.version>
+		<specification-arg-resolver.version>2.6.2</specification-arg-resolver.version>
+		<jasypt-maven-plugin.version>3.0.3</jasypt-maven-plugin.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -85,6 +93,21 @@
 			<groupId>org.testcontainers</groupId>
 			<artifactId>neo4j</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>${modelmapper.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>net.kaczmarzyk</groupId>
+			<artifactId>specification-arg-resolver</artifactId>
+			<version>${specification-arg-resolver.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.supercsv</groupId>
+			<artifactId>super-csv</artifactId>
+			<version>${super-csv.version}</version>
 		</dependency>
 	</dependencies>
 	<dependencyManagement>

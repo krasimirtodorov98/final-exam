@@ -4,4 +4,7 @@
         xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <include  file="db/changelog/create_items_table.xml"/>
+    <include  file="db/changelog/create_purchase_table.xml"/>
+    <include  file="db/changelog/create_supermarkets_table.xml"/>
 </databaseChangeLog>

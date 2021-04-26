@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="create_purchase" author="KT" runOnChange="true">
+        <createTable tableName="purchases">
+            <column name="id" type="uuid" autoIncrement="${autoIncrement}">
+                <constraints
+                        primaryKey="true"
+                        unique="true"
+                        nullable="false"
+                />
+            </column>
+            <column name="payment_type" type="ENUM('CARD','CASH')">
+                <constraints
+                        nullable="false"
+                />
+            </column>
+            <column name="cash_amount" type="DOUBLE">
+            </column>
+            <column name="total_price" type="DOUBLE">
+                <constraints
+                        nullable="false"
+                />
+            </column>
+            <column name="returned_change" type="DOUBLE">
+            </column>
+            <column name="purchased_on" type="DATETIME">
+                <constraints
+                        nullable="false"
+                />
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
